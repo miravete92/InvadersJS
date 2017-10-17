@@ -190,6 +190,20 @@ $(function(){
 	var c = document.getElementById("myCanvas");
 	c.width  = 512;
 	c.height = 768; 
+	window.addEventListener("touchmove", function(evt){
+		handleMove(evt);
+	});
+	window.addEventListener("touchstart", function(evt){
+		handleMove(evt);
+	});
+
+	function handleMove(evt) {
+		console.log("touch");
+		evt.preventDefault();
+	 	var touches = evt.changedTouches;
+	 	spriteList[1].x=touches[0].pageX;
+	}
+
 	startRenderLoop(c, spriteList, inputMapping);
 });
 
