@@ -1,0 +1,16 @@
+body{
+	background-color: #333333;
+	padding: 0;
+	margin: 0;
+}
+.main-div{
+	background-color: white;
+	text-align: center;
+	margin: auto;
+	max-width: 512px;
+}
+canvas{
+	width: 100%;
+	height: 100%;
+	image-rendering: pixelated;
+}
